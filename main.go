@@ -13,5 +13,21 @@ func main() {
 	r.Get("/", func(w http.ResponseWriter, r *http.Request) {
 		w.Write([]byte("welcome"))
 	})
+
+	// Login form route
+	r.Get("/login", func(w http.ResponseWriter, r *http.Request) {
+		w.Write([]byte(`
+            <html>
+                <body>
+                    <form action="/login" method="post">
+                        <input type="text" name="username" placeholder="Username" required>
+                        <input type="password" name="password" placeholder="Password" required>
+                        <!-- Submit button will be added in the next pull request -->
+                    </form>
+                </body>
+            </html>
+        `))
+	})
+
 	http.ListenAndServe(":3000", r)
 }
