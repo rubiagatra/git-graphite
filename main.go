@@ -22,7 +22,7 @@ func main() {
                     <form action="/login" method="post">
                         <input type="text" name="username" placeholder="Username" required>
                         <input type="password" name="password" placeholder="Password" required>
-                        <!-- Submit button will be added in the next pull request -->
+                        <input type="submit" value="Login">
                     </form>
                 </body>
             </html>
